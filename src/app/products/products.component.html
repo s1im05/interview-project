@@ -1,0 +1,15 @@
+@if (myproducts) {
+  <table>
+    <tr *ngFor="let item of myproducts; let i = index">
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.price}}</td>
+      <td>
+        <a href="#" (click)="addToCart(i)">
+          <span class="material-symbols-outlined">cart</span>
+        </a>
+      </td>
+    </tr>
+  </table>
+}
+
