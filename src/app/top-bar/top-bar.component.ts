@@ -30,6 +30,8 @@ export class TopBarComponent {
   }
 
   getProducts() {
-    TopBarComponent.prducts = this.service.loadProducts() as any;
+     this.service.loadProducts().subscribe(res => {
+       TopBarComponent.prducts = res;
+     });
   }
 }
